@@ -6,10 +6,13 @@
 // metric. This runs server-side, so it isn't subject to the browser CORS/
 // CSP restrictions that block this kind of call from client-side code.
 // No API key, no cost, no rate limit issues for normal traffic.
+//
+// Uses CommonJS (module.exports) instead of ES module syntax so it runs
+// correctly with no special package.json configuration required.
 
 const VALID_METRICS = new Set(['hottest', 'coldest', 'humid', 'dry']);
 
-export default async function handler(req, res) {
+module.exports = async (req, res) => {
   if (req.method !== 'POST') {
     res.status(405).json({ error: 'Method not allowed' });
     return;
@@ -47,8 +50,8 @@ export default async function handler(req, res) {
       .map((c, i) => ({
         name: c.name,
         region: c.region,
-        tempF: list[i]?.current?.temperature_2m,
-        humidity: list[i]?.current?.relative_humidity_2m
+        tempF: list[i] && list[i].current ? list[i].current.temperature_2m : undefined,
+        humidity: list[i] && list[i].current ? list[i].current.relative_humidity_2m : undefined
       }))
       .filter(c => typeof c.tempF === 'number' && typeof c.humidity === 'number');
 
@@ -67,4 +70,4 @@ export default async function handler(req, res) {
   } catch (err) {
     res.status(500).json({ error: err.message || 'Unknown server error' });
   }
-}
+};

@@ -267,38 +267,38 @@
 <script>
 const CITIES = {
   us: [
-    {name:"New York", region:"NY", facts:["Its subway is the busiest rapid-transit system in the Western Hemisphere.","Central Park is bigger in area than the country of Monaco."]},
-    {name:"Los Angeles", region:"CA", facts:["It's one of the few major cities with its own mountain range running through it.","The Hollywood Sign originally read 'HOLLYWOODLAND' as a real-estate ad."]},
-    {name:"Chicago", region:"IL", facts:["The Chicago River is dyed bright green every St. Patrick's Day.","It has 26 miles of public lakefront along Lake Michigan."]},
-    {name:"Phoenix", region:"AZ", facts:["It averages over 300 sunny days a year.","It was named for rising atop the ruins of ancient Hohokam canals."]},
-    {name:"Miami", region:"FL", facts:["It's often credited as the only major US city founded by a woman, Julia Tuttle.","The Everglades begin almost at its western edge."]},
-    {name:"Seattle", region:"WA", facts:["The Space Needle once housed the world's first revolving restaurant.","It's nicknamed the Emerald City for its evergreen forests."]},
-    {name:"Las Vegas", region:"NV", facts:["It sits in the middle of the Mojave Desert.","Its Strip lighting alone uses enormous amounts of electricity nightly."]},
-    {name:"Minneapolis", region:"MN", facts:["A 9-mile network of enclosed skyways connects its downtown.","It's called the 'City of Lakes' for its 13 lakes within city limits."]},
-    {name:"Anchorage", region:"AK", facts:["Summer days stretch to nearly 19 hours of daylight.","Moose regularly wander through residential neighborhoods."]},
-    {name:"Honolulu", region:"HI", facts:["It's home to 'Iolani Palace, the only royal palace on US soil.","Its temperatures rarely swing more than 10-15°F across the year."]},
-    {name:"Furnace Creek", region:"CA", facts:["It sits in Death Valley, home to the hottest air temperature ever reliably recorded on Earth.","It's also about 190 feet below sea level."]},
-    {name:"New Orleans", region:"LA", facts:["Much of the city sits below sea level and relies on constant pumping.","It's widely regarded as the birthplace of jazz."]},
-    {name:"Atlanta", region:"GA", facts:["It began life as a railroad town literally named 'Terminus.'","Its airport is consistently among the busiest in the world."]},
-    {name:"Salt Lake City", region:"UT", facts:["The nearby Great Salt Lake is saltier than the ocean.","It hosted the 2002 Winter Olympics."]},
-    {name:"Fairbanks", region:"AK", facts:["Locals can catch the aurora borealis on roughly 200 nights a year.","Winter temperatures regularly drop past -40°F."]}
+    {name:"New York", region:"NY", lat:40.7128, lon:-74.0060, facts:["Its subway is the busiest rapid-transit system in the Western Hemisphere.","Central Park is bigger in area than the country of Monaco."]},
+    {name:"Los Angeles", region:"CA", lat:34.0522, lon:-118.2437, facts:["It's one of the few major cities with its own mountain range running through it.","The Hollywood Sign originally read 'HOLLYWOODLAND' as a real-estate ad."]},
+    {name:"Chicago", region:"IL", lat:41.8781, lon:-87.6298, facts:["The Chicago River is dyed bright green every St. Patrick's Day.","It has 26 miles of public lakefront along Lake Michigan."]},
+    {name:"Phoenix", region:"AZ", lat:33.4484, lon:-112.0740, facts:["It averages over 300 sunny days a year.","It was named for rising atop the ruins of ancient Hohokam canals."]},
+    {name:"Miami", region:"FL", lat:25.7617, lon:-80.1918, facts:["It's often credited as the only major US city founded by a woman, Julia Tuttle.","The Everglades begin almost at its western edge."]},
+    {name:"Seattle", region:"WA", lat:47.6062, lon:-122.3321, facts:["The Space Needle once housed the world's first revolving restaurant.","It's nicknamed the Emerald City for its evergreen forests."]},
+    {name:"Las Vegas", region:"NV", lat:36.1699, lon:-115.1398, facts:["It sits in the middle of the Mojave Desert.","Its Strip lighting alone uses enormous amounts of electricity nightly."]},
+    {name:"Minneapolis", region:"MN", lat:44.9778, lon:-93.2650, facts:["A 9-mile network of enclosed skyways connects its downtown.","It's called the 'City of Lakes' for its 13 lakes within city limits."]},
+    {name:"Anchorage", region:"AK", lat:61.2181, lon:-149.9003, facts:["Summer days stretch to nearly 19 hours of daylight.","Moose regularly wander through residential neighborhoods."]},
+    {name:"Honolulu", region:"HI", lat:21.3069, lon:-157.8583, facts:["It's home to 'Iolani Palace, the only royal palace on US soil.","Its temperatures rarely swing more than 10-15°F across the year."]},
+    {name:"Furnace Creek", region:"CA", lat:36.4664, lon:-116.8656, facts:["It sits in Death Valley, home to the hottest air temperature ever reliably recorded on Earth.","It's also about 190 feet below sea level."]},
+    {name:"New Orleans", region:"LA", lat:29.9511, lon:-90.0715, facts:["Much of the city sits below sea level and relies on constant pumping.","It's widely regarded as the birthplace of jazz."]},
+    {name:"Atlanta", region:"GA", lat:33.7490, lon:-84.3880, facts:["It began life as a railroad town literally named 'Terminus.'","Its airport is consistently among the busiest in the world."]},
+    {name:"Salt Lake City", region:"UT", lat:40.7608, lon:-111.8910, facts:["The nearby Great Salt Lake is saltier than the ocean.","It hosted the 2002 Winter Olympics."]},
+    {name:"Fairbanks", region:"AK", lat:64.8378, lon:-147.7164, facts:["Locals can catch the aurora borealis on roughly 200 nights a year.","Winter temperatures regularly drop past -40°F."]}
   ],
   world: [
-    {name:"London", region:"UK", facts:["Its Underground, opened in 1863, is the world's oldest metro system.","The city has more than 170 museums."]},
-    {name:"Tokyo", region:"Japan", facts:["Shibuya Crossing outside its station is the world's busiest pedestrian crossing.","It has more Michelin-starred restaurants than any other city."]},
-    {name:"Dubai", region:"UAE", facts:["It's home to the Burj Khalifa, the tallest building on Earth.","Its Palm Jumeirah island was built entirely from reclaimed land."]},
-    {name:"Reykjavik", region:"Iceland", facts:["Nearly all of its buildings are heated with geothermal energy.","It's the northernmost capital of a sovereign state."]},
-    {name:"Cairo", region:"Egypt", facts:["The Giza pyramids sit right at the edge of the modern city.","It's one of the oldest continuously inhabited urban areas on Earth."]},
-    {name:"Nairobi", region:"Kenya", facts:["It's one of very few capitals with a national park, lions included, inside city limits.","It's nicknamed the 'Green City in the Sun.'"]},
-    {name:"Singapore", region:"Singapore", facts:["Over half its land area is covered in greenery by design.","Its airport has a butterfly garden inside the terminal."]},
-    {name:"Mumbai", region:"India", facts:["Its dabbawalas deliver roughly 200,000 lunchboxes a day with near-zero errors.","The city was originally built across seven separate islands."]},
-    {name:"Bangkok", region:"Thailand", facts:["Its full ceremonial name is one of the longest place names in the world.","Its canal network once earned it the nickname 'Venice of the East.'"]},
-    {name:"Sydney", region:"Australia", facts:["The Opera House's roof shells were inspired by orange segments and sails.","Its harbour bridge is nicknamed 'The Coathanger.'"]},
-    {name:"Mexico City", region:"Mexico", facts:["It's built directly atop the ruins of the Aztec capital, Tenochtitlan.","The drained lakebed beneath it means parts of the city are slowly sinking."]},
-    {name:"Riyadh", region:"Saudi Arabia", facts:["It sits on the arid Najd plateau in the middle of the peninsula.","The nearby mud-brick district of Diriyah is a UNESCO World Heritage site."]},
-    {name:"Ulaanbaatar", region:"Mongolia", facts:["It's the coldest national capital on Earth on average.","Roughly a third of its residents still live in traditional gers, or yurts."]},
-    {name:"Yakutsk", region:"Russia", facts:["It's the largest city built entirely on permafrost.","Winter temperatures there can plunge past -50°F."]},
-    {name:"Kuwait City", region:"Kuwait", facts:["Nearby stations have recorded some of the highest temperatures ever measured on Earth.","Its skyline is anchored by the iconic Kuwait Towers."]}
+    {name:"London", region:"UK", lat:51.5072, lon:-0.1276, facts:["Its Underground, opened in 1863, is the world's oldest metro system.","The city has more than 170 museums."]},
+    {name:"Tokyo", region:"Japan", lat:35.6895, lon:139.6917, facts:["Shibuya Crossing outside its station is the world's busiest pedestrian crossing.","It has more Michelin-starred restaurants than any other city."]},
+    {name:"Dubai", region:"UAE", lat:25.2048, lon:55.2708, facts:["It's home to the Burj Khalifa, the tallest building on Earth.","Its Palm Jumeirah island was built entirely from reclaimed land."]},
+    {name:"Reykjavik", region:"Iceland", lat:64.1466, lon:-21.9426, facts:["Nearly all of its buildings are heated with geothermal energy.","It's the northernmost capital of a sovereign state."]},
+    {name:"Cairo", region:"Egypt", lat:30.0444, lon:31.2357, facts:["The Giza pyramids sit right at the edge of the modern city.","It's one of the oldest continuously inhabited urban areas on Earth."]},
+    {name:"Nairobi", region:"Kenya", lat:-1.2921, lon:36.8219, facts:["It's one of very few capitals with a national park, lions included, inside city limits.","It's nicknamed the 'Green City in the Sun.'"]},
+    {name:"Singapore", region:"Singapore", lat:1.3521, lon:103.8198, facts:["Over half its land area is covered in greenery by design.","Its airport has a butterfly garden inside the terminal."]},
+    {name:"Mumbai", region:"India", lat:19.0760, lon:72.8777, facts:["Its dabbawalas deliver roughly 200,000 lunchboxes a day with near-zero errors.","The city was originally built across seven separate islands."]},
+    {name:"Bangkok", region:"Thailand", lat:13.7563, lon:100.5018, facts:["Its full ceremonial name is one of the longest place names in the world.","Its canal network once earned it the nickname 'Venice of the East.'"]},
+    {name:"Sydney", region:"Australia", lat:-33.8688, lon:151.2093, facts:["The Opera House's roof shells were inspired by orange segments and sails.","Its harbour bridge is nicknamed 'The Coathanger.'"]},
+    {name:"Mexico City", region:"Mexico", lat:19.4326, lon:-99.1332, facts:["It's built directly atop the ruins of the Aztec capital, Tenochtitlan.","The drained lakebed beneath it means parts of the city are slowly sinking."]},
+    {name:"Riyadh", region:"Saudi Arabia", lat:24.7136, lon:46.6753, facts:["It sits on the arid Najd plateau in the middle of the peninsula.","The nearby mud-brick district of Diriyah is a UNESCO World Heritage site."]},
+    {name:"Ulaanbaatar", region:"Mongolia", lat:47.8864, lon:106.9057, facts:["It's the coldest national capital on Earth on average.","Roughly a third of its residents still live in traditional gers, or yurts."]},
+    {name:"Yakutsk", region:"Russia", lat:62.0397, lon:129.7420, facts:["It's the largest city built entirely on permafrost.","Winter temperatures there can plunge past -50°F."]},
+    {name:"Kuwait City", region:"Kuwait", lat:29.3759, lon:47.9774, facts:["Nearby stations have recorded some of the highest temperatures ever measured on Earth.","Its skyline is anchored by the iconic Kuwait Towers."]}
   ]
 };
 
@@ -386,9 +386,9 @@ async function handleMetric(metric){
   setActiveMetric(metric);
   errorEl.style.display = 'none';
   factsEl.innerHTML = '';
-  makeFlapBoard(line1El, 'SEARCHING', 22);
+  makeFlapBoard(line1El, 'CHECKING', 22);
   makeFlapBoard(line2El, '- - - -', 8);
-  metaEl.textContent = 'Searching live conditions… this can take up to 15s';
+  metaEl.textContent = 'Checking current conditions…';
 
   try {
     const cities = CITIES[currentScope];
